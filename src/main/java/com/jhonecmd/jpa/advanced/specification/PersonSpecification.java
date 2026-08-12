@@ -19,13 +19,13 @@ public class PersonSpecification {
 
             if (!ObjectUtils.isEmpty(filter.getName())) {
                 predicateList.add(criteriaBuilder.like(
-                        criteriaBuilder.upper(root.get("name")), filter.getName().toUpperCase().concat("%")
+                        criteriaBuilder.upper(root.get("name")), "%".concat(filter.getName().toUpperCase()).concat("%")
                 ));
             }
 
             if (!ObjectUtils.isEmpty(filter.getEmail())) {
                 predicateList.add(criteriaBuilder.like(
-                        criteriaBuilder.lower(root.get("email")), filter.getName().toLowerCase().concat("%")
+                        criteriaBuilder.lower(root.get("email")), "%".concat(filter.getEmail().toLowerCase()).concat("%")
                 ));
             }
 
