@@ -5,10 +5,10 @@ import com.jhonecmd.jpa.advanced.model.PersonEntity;
 import com.jhonecmd.jpa.advanced.repository.PersonRepository;
 import com.jhonecmd.jpa.advanced.specification.PersonSpecification;
 import lombok.AllArgsConstructor;
-import org.hibernate.query.Page;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.awt.print.Pageable;
 import java.util.List;
 
 @Service

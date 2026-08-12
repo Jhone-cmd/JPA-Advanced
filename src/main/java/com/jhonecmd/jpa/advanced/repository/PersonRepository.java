@@ -10,5 +10,4 @@ import java.awt.print.Pageable;
 import java.util.UUID;
 
 public interface PersonRepository extends JpaRepository<PersonEntity, UUID>, JpaSpecificationExecutor<PersonEntity> {
-    Page findAll(Specification<PersonEntity> persons, Pageable pageable);
 }
